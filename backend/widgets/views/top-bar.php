@@ -118,7 +118,7 @@ use yii\helpers\Url;
                 </h6>
                 <a class="dropdown-item d-flex align-items-center" href="#">
                     <div class="dropdown-list-image mr-3">
-                        <img class="rounded-circle" src="admin/img/undraw_profile_1.svg"
+                        <img class="rounded-circle" src="<?=Url::to(['/img/undraw_profile_1.svg'])?>"
                              alt="...">
                         <div class="status-indicator bg-success"></div>
                     </div>
@@ -130,7 +130,7 @@ use yii\helpers\Url;
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
                     <div class="dropdown-list-image mr-3">
-                        <img class="rounded-circle" src="admin/img/undraw_profile_2.svg"
+                        <img class="rounded-circle" src="<?=Url::to(['/img/undraw_profile_2.svg'])?>"
                              alt="...">
                         <div class="status-indicator"></div>
                     </div>
@@ -142,7 +142,7 @@ use yii\helpers\Url;
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
                     <div class="dropdown-list-image mr-3">
-                        <img class="rounded-circle" src="admin/img/undraw_profile_3.svg"
+                        <img class="rounded-circle" src="<?=Url::to(['/img/undraw_profile_3.svg'])?>"
                              alt="...">
                         <div class="status-indicator bg-warning"></div>
                     </div>
@@ -159,7 +159,7 @@ use yii\helpers\Url;
                         <div class="status-indicator bg-success"></div>
                     </div>
                     <div>
-                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
+                        <div class="text-truncate">Am I a good boy? The reason I ask is that someone
                             told me that people say this to all dogs, even if they aren't good...</div>
                         <div class="small text-gray-500">Chicken the Dog · 2w</div>
                     </div>
@@ -178,7 +178,7 @@ use yii\helpers\Url;
                     <?= Yii::$app->user->identity->getDisplayName()?>
                 </span>
                 <img class="img-profile rounded-circle"
-                     src="admin/img/undraw_profile.svg" alt="">
+                     src="<?=Url::to(['/img/undraw_profile.svg'])?>" alt="">
             </a>
             <!-- Dropdown - User Information -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

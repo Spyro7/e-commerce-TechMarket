@@ -52,7 +52,7 @@ use yii\helpers\Url;
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="<?=Url::to('/admin')?>">
+        <a class="nav-link" href="<?=Url::to('/')?>">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>

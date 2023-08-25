@@ -22,6 +22,7 @@ use Yii;
  * @property User $createdBy
  * @property OrderItems[] $orderItems
  * @property User $updatedBy
+ * @property mixed|null $imageFile
  */
 class Products extends \yii\db\ActiveRecord
 {
@@ -39,7 +40,7 @@ class Products extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'price', 'status'], 'required'],
+            [['name', 'price', 'status', 'image'], 'required'],
             [['description'], 'string'],
             [['price'], 'number'],
             [['status', 'created_at', 'updated_at', 'created_by', 'updated_by'], 'integer'],
@@ -59,9 +60,9 @@ class Products extends \yii\db\ActiveRecord
             'id' => 'ID',
             'name' => 'Name',
             'description' => 'Description',
-            'image' => 'Image',
+            'image' => 'Product Image',
             'price' => 'Price',
-            'status' => 'Status',
+            'status' => 'Published',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
             'created_by' => 'Created By',
@@ -116,5 +117,15 @@ class Products extends \yii\db\ActiveRecord
     public static function find()
     {
         return new \common\models\query\ProductQuery(get_called_class());
+    }
+
+    public function upload()
+    {
+        if ($this->validate()) {
+            $this->imageFile->saveAs('uploads/' . $this->imageFile->baseName . '.' . $this->imageFile->extension);
+            return true;
+        } else {
+            return false;
+        }
     }
 }

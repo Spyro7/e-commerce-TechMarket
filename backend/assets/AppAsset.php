@@ -2,7 +2,9 @@
 
 namespace backend\assets;
 
+use yii\bootstrap5\BootstrapPluginAsset;
 use yii\web\AssetBundle;
+use yii\web\JqueryAsset;
 
 /**
  * Main backend application asset bundle.
@@ -27,6 +29,7 @@ class AppAsset extends AssetBundle
     ];
     public $depends = [
         'yii\web\YiiAsset',
-//        'yii\bootstrap5\BootstrapAsset',
+        JqueryAsset::class,
+        BootstrapPluginAsset::class
     ];
 }
