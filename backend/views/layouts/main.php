@@ -33,7 +33,9 @@ AppAsset::register($this);
         <div id="content">
 
             <?=TopBar::widget()?>
-            <?=$content?>
+            <div class="p-5">
+                <?=$content?>
+            </div>
         </div>
         <?=Footer::widget()?>
     </div>

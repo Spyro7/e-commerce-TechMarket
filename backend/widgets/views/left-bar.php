@@ -131,14 +131,14 @@ use yii\helpers\Url;
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="<?=Url::to(['/category/index'])?>">
             <i class="fas fa-fw fa-layer-group"></i>
             <span>Categories</span></a>
     </li>
 
     <!-- Nav Item - Tables -->
     <li class="nav-item">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="<?=Url::to(['/product/index'])?>">
             <i class="fas fa-fw fa-box"></i>
             <span>Products</span></a>
     </li>
